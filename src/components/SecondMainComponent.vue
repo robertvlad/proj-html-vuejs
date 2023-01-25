@@ -1,4 +1,16 @@
+<script>
+
+    export default {
+
+        name: 'SecondMainComponent'
+
+    }
+
+</script>
+
+
 <template>
+
     <div class="svg">
         <img src="../../public/svg/svg-0.svg">
     </div>
@@ -69,16 +81,14 @@
     <div class="svg-2">
         <img src="../../public/svg/svg-1.svg">
     </div>
+
 </template>
 
-<script>
-    export default {
-        name: 'SecondMainComponent'
-    }
-</script>
 
 <style lang="scss" scoped>
+
 @use '../assets/style/partials/variables' as *;
+@use '../assets/style/partials/mixins' as *;
 
 p {
     color: $text-white;
@@ -92,12 +102,20 @@ a {
     position: relative;
     overflow: hidden;
     bottom: -1px;
+
+    path {
+        fill: $pink;
+    }
 }
 
 .svg-2 {
     position: relative;
     overflow: hidden;
     top: -1px;
+
+    path {
+        fill: $pink;
+    }
 }
 
 .bg-red {
@@ -189,13 +207,7 @@ a {
     margin-top: 80px;
 
     .button {
-        display: inline-block;
-        padding: 1px 43px;
-        border-radius: 50px;
-        line-height: 60px;
-        text-align: center;
-        font-size: 15px;
-        font-weight: bold;
+        @include button-general;
     }
 
     .btn-event {
@@ -209,4 +221,5 @@ a {
         background-color: $pink;
     }
 }
+
 </style>

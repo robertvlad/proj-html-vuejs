@@ -1,4 +1,29 @@
+<script>
+
+    export default {
+
+        name: 'FirstMainComponent',
+
+        props: {
+
+            imgs: Array,
+            items: Array
+
+        },
+
+        data() {
+            return {
+
+                text: 'law faculty', 
+
+            }
+        }
+    }
+
+</script>
+
 <template>
+
     <div class="position-relative">
         <img src="../../public/img/home-background.png" class="wave-main">
         <div class="container">
@@ -8,7 +33,7 @@
                         <img src="../../public/img/Books-icon.png" alt="Book Icon" class="book-icon">
                         <h2 class="display-5 fw-bold mb-5 mt-3">Thousand of courses for any type of student</h2>
                         <p>At EduPrime, it doesn&apos;t matter what domain you wish to pursue a career in. Here you can find a course that satisfies your needs whitin a click away and applies for a course in a matter of minutes. EduPrime is ranked as the most versatile university in the world, thanks to the number of courses it provides.</p>
-                        <a href="#nogo"><span class="browse button mt-3">Browse through courses</span></a>
+                        <a href="#"><span class="browse button mt-3">Browse through courses</span></a>
                     </div>
                     <div class="w-50 mrg">
                         <img src="../../public/img/Graduation-Illustration.png" alt="Graduation image" class="graduation-img">
@@ -24,7 +49,7 @@
             <div class="box-items mt-4">
                 <div class="container d-flex text-center justify-content-center">
                     <div v-for="(img, index) in imgs" :key="index" class="box" :class="{ 'active': img.text == text }" @click="text = img.text">
-                        <a href="#nogo">
+                        <a href="#">
                             <img :src="img.img" :alt="img.text" class="img-faculties" :class="{ 'active': img.text == text }">
                             <p class="text-capitalize fw-bold faculties">{{img.text}}</p>
                         </a>
@@ -39,7 +64,7 @@
                     <div class="description-faculties" >
                         <h2 class="mb-4">{{ item.title }}</h2>
                         <p class="text">{{ item.text }}</p>
-                        <a href="#nogo"><span class="more button">Read More</span></a>
+                        <a href="#"><span class="more button">Read More</span></a>
                     </div>
                 </div>
             </div>
@@ -47,33 +72,19 @@
     </div>
 </template>
 
-<script>
-    export default {
-        name: 'FirstMainComponent',
-        props: {
-            imgs: Array,
-            items: Array
-        },
-        data() {
-            return {
-                text: 'law faculty', 
-            }
-        }
-    }
-</script>
-
 <style lang="scss" scoped>
-@use '../assets/style/partials/variables' as *;
 
+@use '../assets/style/partials/variables' as *;
+@use '../assets/style/partials/mixins' as *;
+
+
+// GENERALI
+
+.button {
+    @include button-general;
+}
 .pad {
     padding-top: 150px;
-}
-.button {
-    display: inline-block;
-    padding: 1px 43px;
-    border-radius: 50px;
-    line-height: 60px;
-    text-align: center;
 }
 
 .browse {
@@ -152,7 +163,7 @@
             height: 0;
             border: solid transparent;
             border-width: 15px;
-            border-top-color: #DA5F60;
+            border-top-color: $pink;
             content: '';
             pointer-events: none;
         }
@@ -189,4 +200,5 @@
         background-color: $yellow;
     }
 }
+
 </style>

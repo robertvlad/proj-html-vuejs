@@ -1,4 +1,38 @@
+<script>
+
+import ListLinksFooter from './ListLinksFooter.vue';
+import { linksFooter } from '../store'
+
+    export default {
+
+        name: 'FooterComponent',
+
+        components: {
+
+            ListLinksFooter
+
+        },
+
+        props: {
+
+            social: Array,
+            courses: Array
+
+        },
+
+        data() {
+            return {
+
+                footerLinks: linksFooter
+
+            }
+        }
+    }
+
+</script>
+
 <template>
+
     <div class="bg-red">
         <div class="container">
             <div class="row">
@@ -31,28 +65,9 @@
             </div>
         </div>
     </div>
+
 </template>
 
-<script>
-import ListLinksFooter from './ListLinksFooter.vue';
-import { linksFooter } from '../store'
-
-    export default {
-        name: 'FooterComponent',
-        components: {
-            ListLinksFooter
-        },
-        props: {
-            social: Array,
-            courses: Array
-        },
-        data() {
-            return {
-                footerLinks: linksFooter
-            }
-        }
-    }
-</script>
 
 <style lang="scss" scoped>
 @use '../assets/style/partials/variables' as *;
@@ -131,12 +146,14 @@ p {
     }
 
 }
+
 h3 {
     font-size: 16px;
     text-align: end;
 }
 
 .tag-courses {
+
     a {
         text-decoration: none;
         color: $white;
@@ -155,4 +172,5 @@ h3 {
         background-color: $yellow;
     }
 }
+
 </style>

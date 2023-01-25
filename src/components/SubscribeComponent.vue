@@ -1,4 +1,15 @@
+<script>
+
+    export default {
+
+        name: 'SubscribeComponent'
+
+    }
+</script>
+
+
 <template>
+
     <div class="bg-red">
         <div class="container">
             <div class="row box align-items-center">
@@ -12,13 +23,10 @@
             </div>
         </div>
     </div>
+
 </template>
 
-<script>
-    export default {
-        name: 'SubscribeComponent'
-    }
-</script>
+
 
 <style lang="scss" scoped>
 @use '../assets/style/partials/variables' as *;
@@ -65,4 +73,5 @@ h2 {
         }
     }
 }
+
 </style>

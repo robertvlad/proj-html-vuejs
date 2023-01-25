@@ -1,4 +1,15 @@
+<script>
+
+    export default {
+
+        name: 'ThirdMainComponent'
+
+    }
+
+</script>
+
 <template>
+
     <div class="container mt-5">
         <h5 class="display-5">Latest Courses</h5>
         <section>
@@ -110,41 +121,39 @@
             </div>
         </section>
     </div>
+
 </template>
 
-<script>
-    export default {
-        name: 'ThirdMainComponent'
-    }
-</script>
-
 <style lang="scss" scoped>
+
 @use '../assets/style/partials/variables' as *;
 
 .courses {
     margin-top: 70px;
+
     .col-3 {
-    img {
-        width: 70px;
-    }
 
-    a {
-        text-decoration: none;
-        color: $text-black;
-    }
+        img {
+            width: 70px;
+        }
 
-    a:hover {
-        color: $pink;
-    }
+        a {
+            text-decoration: none;
+            color: $text-black;
+        }
 
-    h5 {
-        font-size: 18px;
-    }
+        a:hover {
+            color: $pink;
+        }
 
-    i, p {
-        font-size: 14px;
+        h5 {
+            font-size: 18px;
+        }
+
+        i, p {
+            font-size: 14px;
+        }   
     }
-}
 }
 
 .box-text {
@@ -221,4 +230,5 @@
         }
     }
 }
+
 </style>

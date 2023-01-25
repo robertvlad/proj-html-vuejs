@@ -1,13 +1,20 @@
 <script>
+
     export default {
+
         name: 'PartnersComponent',
+
         props: {
+
             imgs: Array,
+
         },
     }
+
 </script>
 
 <template>
+
     <div class="container mt-5">
         <div class="d-flex flex-column align-items-center text-center">
             <h2 class="display-4 mb-4">Partners</h2>
@@ -19,7 +26,10 @@
             </div>
         </div>
     </div>
-    <div class="bg"></div>
+    <div class="bg">
+
+    </div>
+
 </template>
 
 
@@ -44,4 +54,5 @@ img {
 img:hover {
     opacity: 1;
 }
+
 </style>

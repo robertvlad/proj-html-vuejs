@@ -1,4 +1,19 @@
+<script>
+
+    export default {
+
+        name: 'ListLinksFooter',
+
+        props: [
+
+            'obj'
+
+        ]
+    }
+</script>
+
 <template>
+
     <div class="list">
         <h3 class="text-white">{{ obj.title }}</h3>
         <div>
@@ -9,18 +24,12 @@
             </ul>
         </div>
     </div>
+
 </template>
 
-<script>
-    export default {
-        name: 'ListLinksFooter',
-        props: [
-            'obj'
-        ]
-    }
-</script>
 
 <style lang="scss" scoped>
+
 @use '../assets/style/partials/variables' as *;
 
 .list {
@@ -48,4 +57,5 @@ ul {
         }
     }
 }
+
 </style>
