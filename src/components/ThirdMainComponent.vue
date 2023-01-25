@@ -1,9 +1,3 @@
-<script>
-    export default {
-        name: 'ThirdMainComponent'
-    }
-</script>
-
 <template>
     <div class="container mt-5">
         <h5 class="display-5">Latest Courses</h5>
@@ -118,6 +112,11 @@
     </div>
 </template>
 
+<script>
+    export default {
+        name: 'ThirdMainComponent'
+    }
+</script>
 
 <style lang="scss" scoped>
 @use '../assets/style/partials/variables' as *;
@@ -166,16 +165,12 @@
             color: $white;
             font-size: 14px;
             box-shadow: 0px 0px 20px rgb(0 0 0 / 15%);
-    }
+            transition: all 0.3s ease-in-out;
 
-    a.view-course:hover {
-        background-color: $yellow;
-        color: $white;
-        transition: 0.3s ease-in;   
-    }
-
-    a.view-course:not(:hover) {
-        transition: 0.3s ease-out;
+            &:hover {
+                background-color: $yellow;
+                color: $white;
+            }
     }
 
 }
@@ -214,20 +209,16 @@
         border-radius: 35px;
         text-align: center;
         font-size: 14px;
+        transition: all 0.3s ease-in-out;
     }
 
     .discover {
         background-color: $pink;
         color: $white;
-    }
 
-    .discover:hover {
-        background-color: $yellow;
-        transition: 0.3s ease-in;
-    }
-
-    .discover:not(:hover) {
-        transition: 0.3s ease-out;
+        &:hover {
+            background-color: $yellow;
+        }
     }
 }
 </style>
