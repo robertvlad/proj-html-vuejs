@@ -34,8 +34,10 @@
             <div class="box-items mt-4">
                 <div class="container d-flex text-center justify-content-center">
                     <div v-for="(img, index) in imgs" :key="index" class="box" :class="{ 'active': img.active }">
-                        <img :src="img.img" :alt="img.text" class="img-faculties" :class="{ 'active': img.active }">
-                        <p class="text-capitalize fw-bold faculties">{{img.text}}</p>
+                        <a href="#nogo">
+                            <img :src="img.img" :alt="img.text" class="img-faculties" :class="{ 'active': img.active }">
+                            <p class="text-capitalize fw-bold faculties">{{img.text}}</p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -103,7 +105,11 @@
     
     .box {
         border-left: 2px solid $gray;
-        cursor: pointer;
+        position: relative;
+
+        a {
+            text-decoration: none;
+        }
 
         .img-faculties {
             padding: 25px 70px;
@@ -111,6 +117,7 @@
 
         .img-faculties.active {
             filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(241deg) brightness(250%) contrast(101%);
+        
         }
 
         .faculties {
@@ -124,6 +131,20 @@
         
         p {
             color: $white;
+        }
+
+        a::after {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -15px;
+            width: 0;
+            height: 0;
+            border: solid transparent;
+            border-width: 15px;
+            border-top-color: #DA5F60;
+            content: '';
+            pointer-events: none;
         }
     }
 

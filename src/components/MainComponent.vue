@@ -1,6 +1,7 @@
 <script>
 
 import FirstMainComponent from './FirstMainComponent.vue';
+import SecondMainComponent from './SecondMainComponent.vue';
 
 import { store } from '../store';
 
@@ -10,7 +11,8 @@ import { store } from '../store';
 
     components: { 
 
-        FirstMainComponent 
+        FirstMainComponent,
+        SecondMainComponent
 
     },
 
@@ -29,6 +31,10 @@ import { store } from '../store';
 
     <div>
         <FirstMainComponent :imgs='store.imgFirstMain'/>
+    </div>
+
+    <div>
+        <SecondMainComponent/>
     </div>
     
 </template>
