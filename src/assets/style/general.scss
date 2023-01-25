@@ -1,5 +1,7 @@
+// IMPORT VARIABILI SCSS
 @use './partials/variables' as *;
 
+// FONTAWESOME
 $fa-font-path : "./webfonts";
 @import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import '@fortawesome/fontawesome-free/scss/brands.scss';
@@ -7,10 +9,14 @@ $fa-font-path : "./webfonts";
 @import '@fortawesome/fontawesome-free/scss/solid.scss';
 @import '@fortawesome/fontawesome-free/scss/brands.scss';
 
+// FONT PAGINA (FREDOKA)
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
-
+// IMPORT BOOTSTRAP
 @import 'bootstrap/scss/bootstrap.scss';
+
+
+// REGOLE GENERALI SCSS
 
 html {
     scroll-behavior: smooth;
@@ -18,8 +24,10 @@ html {
 
 body {
     color: $black2;
-    font-family: 'Fredoka One', cursive;
     letter-spacing: 0.8px;
+
+    // FONT
+    font-family: 'Fredoka One', cursive;
 }
 
 img {

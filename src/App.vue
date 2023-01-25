@@ -1,10 +1,12 @@
 <script>
 
+// IMPORT COMOPONENTI PAGINA
 import HeaderComponent from './components/HeaderComponent.vue';
 import MainComponent from './components/MainComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
-import { store } from './store';
 
+// IMPORT DATA
+import { store } from './store';
 
 export default {
 

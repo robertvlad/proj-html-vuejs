@@ -1,35 +1,107 @@
 import { reactive } from 'vue';
 
 export const store = reactive ({
+
+    // LINK HEADER
     links: [
         {
             title: 'Home',
             url: '#',
             arrow: true,
             current: true,
+            hover: false,
+            pippo: true,
+
+            // DROPDOWN MENU
+            linksDropdown: [
+                {
+                   text:  'Driving School'
+                },
+                {
+                   text:  'High School'
+                },
+                {
+                   text:  'Kinder Garten'
+                },
+                {
+                   text:  'Header Video'
+                },
+            ]
         },
         {
             title: 'Courses',
             url: '#',
             arrow: true,
             current: false,
+            hover: false,
+            pippo: true,
+            
+            // DROPDOWN MENU
+            linksDropdown: [
+                {
+                   text:  'Our Courses'
+                },
+                {
+                   text:  'Single Course'
+                },
+                {
+                   text:  'Intructor Profile'
+                },
+                {
+                   text:  'Become a Teacher'
+                },
+            ]
         },
         {
             title: 'About Us',
             url: '#',
             current: false,
+            
         },
         {
             title: 'News',
             url: '#',
             arrow: true,
             current: false,
+            hover: false,
+            pippo: true,
+
+            // DROPDOWN MENU
+            linksDropdown: [
+                {
+                   text:  'EduPrime Blog'
+                },
+                {
+                   text:  'Single Post'
+                },
+                {
+                   text:  'Category Posts'
+                },
+            ]
         },
         {
             title: 'Pages',
             url: '#',
             arrow: true,
             current: false,
+            hover: false,
+            pippo: true,
+
+            // DROPDOWN MENU
+            linksDropdown: [
+                {
+                   text:  'How it Works'
+                },
+                {
+                   text:  'Single Event'
+                },
+                {
+                   text:  'University Shop'
+                },
+                {
+                   text:  'Single Product'
+                },
+            ]
         },
         {
             title: 'Contact',
@@ -42,6 +114,8 @@ export const store = reactive ({
             current: false,
         },
     ],
+
+    // LINK IMMAGINI FIRTST MAIN COMPONENT
     imgFirstMain: [
         {
             img: '../public/img/Gavel-v2.png',
@@ -69,6 +143,8 @@ export const store = reactive ({
             active: false
         },
     ],
+
+    // LINK IMMAGINI PARTENERS
     imgPartners: [
         {
             img: '../public/img/partner-2.png',
@@ -103,6 +179,8 @@ export const store = reactive ({
             text: 'Partner 8'
         },
     ],
+
+    // LINK SOCIALS ICONS
     socialLinks: [
         {
             url: '#',
@@ -117,6 +195,8 @@ export const store = reactive ({
             icon: '<i class="fa-brands fa-instagram"></i>'
         }
     ],
+
+    // LINK BUTTONS TYPE COURSES FOOTER 
     coursesFooter: [
         {
             url: '#',
@@ -147,6 +227,8 @@ export const store = reactive ({
             text: 'Fitness'
         }
     ],
+
+    // LINK COMPONENTS (FACULTIES AVAIBLE)
     faculties: [
         {
             title: 'law faculty',
@@ -176,6 +258,7 @@ export const store = reactive ({
     ]
 });
 
+// LINKS FOOTER MENU
 const linksFooter = [
     {
         title: 'Get EduPrime',
