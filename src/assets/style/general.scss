@@ -1,0 +1,24 @@
+$fa-font-path : "./webfonts";
+
+@import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '@fortawesome/fontawesome-free/scss/brands.scss';
+@import '@fortawesome/fontawesome-free/scss/regular.scss';
+@import '@fortawesome/fontawesome-free/scss/solid.scss';
+
+@import 'bootstrap/scss/bootstrap.scss';
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+
+    .active {
+        color: $yellow;
+    }
+}
+
+a {
+    text-decoration: none;
+}
