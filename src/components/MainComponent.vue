@@ -1,15 +1,39 @@
-<template>
-    <div>
-
-    </div>
-</template>
-
 <script>
+
+import FirstMainComponent from './FirstMainComponent.vue';
+
+import { store } from '../store';
+
     export default {
-        name: 'MainComponent'
-    }
+
+    name: "MainComponent",
+
+    components: { 
+
+        FirstMainComponent 
+
+    },
+
+    data() {
+        return {
+
+            store
+
+        }
+    },
+}
+
 </script>
 
-<style lang="scss" scoped>
+<template>
 
+    <div>
+        <FirstMainComponent :imgs='store.imgFirstMain'/>
+    </div>
+    
+</template>
+
+
+<style lang="scss" scoped>
+    
 </style>
