@@ -4,7 +4,6 @@
     }
 </script>
 
-
 <template>
     <div class="svg">
         <img src="../../public/svg/svg-0.svg">
@@ -78,11 +77,7 @@
     </div>
 </template>
 
-<script>
-    export default {
-        name: 'SecondMainComponent'
-    }
-</script>
+
 
 <style lang="scss" scoped>
 @use '../assets/style/partials/variables' as *;
@@ -93,33 +88,6 @@ p {
 
 a {
     text-decoration: none;
-}
-
-.box-button {
-    margin-top: 80px;
-    .button {
-        display: inline-block;
-        padding: 0.1rem 2rem;
-        border-radius: 50px;
-        line-height: 60px;
-        text-align: center;
-        font-size: 15px;
-    }
-
-    .btn-event {
-        background-color: $yellow;
-        color: $white;
-        box-shadow: 0px 0px 20px rgb(0 0 0 / 15%);
-    }
-
-    .btn-event:hover {
-        background-color: $pink;
-        transition: 0.3s ease-in;
-    }
-
-    .btn-event:not(:hover) {
-        transition: 0.3s ease-out;
-    }
 }
 
 .svg {
@@ -167,6 +135,8 @@ a {
 }
 
 .coaching-sessions {
+    padding-left: 15px;
+    padding-right: 15px;
 
     .description {
         padding: 15px 30px;
@@ -208,6 +178,34 @@ a {
 
     .date {
         font-size: 15px;
+    }
+}
+
+.box-button {
+    margin-top: 80px;
+
+    .button {
+        display: inline-block;
+        padding: 0.1rem 2rem;
+        border-radius: 50px;
+        line-height: 60px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .btn-event {
+        background-color: $yellow;
+        color: $white;
+        box-shadow: 0px 0px 20px rgb(0 0 0 / 15%);
+    }
+
+    .btn-event:hover {
+        background-color: $pink;
+        transition: 0.3s ease-in;
+    }
+
+    .btn-event:not(:hover) {
+        transition: 0.3s ease-out;
     }
 }
 </style>

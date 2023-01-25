@@ -7,7 +7,6 @@
     }
 </script>
 
-
 <template>
     <div class="position-relative">
         <img src="../../public/img/home-background.png" class="wave-main">
@@ -101,7 +100,7 @@
 }
 
 .box-items {
-    box-shadow: 2px 2px 10px $black;
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 20%);
     
     .box {
         border-left: 2px solid $gray;

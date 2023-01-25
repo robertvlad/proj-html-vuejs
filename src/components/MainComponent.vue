@@ -1,45 +1,50 @@
-<script>
 
+<script>
 import FirstMainComponent from './FirstMainComponent.vue';
 import SecondMainComponent from './SecondMainComponent.vue';
-
+import ThirdMainComponent from './ThirdMainComponent.vue';
+import SubscribeComponent from './SubscribeComponent.vue';
+import PartnersComponent from './PartnersComponent.vue';
 import { store } from '../store';
 
+
     export default {
-
     name: "MainComponent",
-
-    components: { 
-
+    components: {
         FirstMainComponent,
-        SecondMainComponent
-
+        SecondMainComponent,
+        ThirdMainComponent,
+        SubscribeComponent,
+        PartnersComponent
     },
-
     data() {
         return {
-
             store
-
         }
     },
 }
-
 </script>
 
 <template>
-
     <div>
         <FirstMainComponent :imgs='store.imgFirstMain'/>
     </div>
-
     <div>
         <SecondMainComponent/>
     </div>
-    
+    <div>
+        <ThirdMainComponent/>
+    </div>
+    <div>
+        <SubscribeComponent/>
+    </div>
+    <div>
+        <PartnersComponent :imgs='store.imgPartners'/>
+    </div>
 </template>
 
 
 <style lang="scss" scoped>
+
     
 </style>
